@@ -384,7 +384,7 @@ export default function EntryPage({ onSuccess }) {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/entry", {
+      const res = await fetch("https://portfolio-backend-gki9.onrender.com/api/entry", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
