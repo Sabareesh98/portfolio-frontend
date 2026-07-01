@@ -5,12 +5,10 @@ import { motion } from "framer-motion";
 import {
   FaAws,
   FaGithub,
-  FaExternalLinkAlt,
   FaReact,
-  FaPython,
 } from "react-icons/fa";
 
-import { SiDjango, SiMongodb, SiMysql, SiJavascript } from "react-icons/si";
+import { SiDjango, SiJavascript } from "react-icons/si";
 
 // ================= PROJECT DATA =================
 

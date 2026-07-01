@@ -6,7 +6,6 @@ import {
   FaReact,
   FaNodeJs,
   FaDocker,
-  FaGitAlt,
   FaJava,
   FaPython,
   FaAws,
@@ -109,20 +108,6 @@ const Glow2 = styled.div`
 const Content = styled.div`
   position: relative;
   z-index: 10;
-`;
-
-const SmallTitle = styled.div`
-  text-align: center;
-
-  color: #60a5fa;
-
-  letter-spacing: 2px;
-
-  text-transform: uppercase;
-
-  font-size: 0.95rem;
-
-  margin-bottom: 1rem;
 `;
 
 const MainTitle = styled.h2`
