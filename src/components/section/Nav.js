@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import styled from "styled-components";
 
 import {
@@ -118,37 +118,40 @@ const NavItem = styled.button`
 export default function Nav() {
   const [active, setActive] = useState("home");
 
-  const sections = [
-    {
-      id: "home",
-      label: "Home",
-      icon: <FaHome />,
-    },
+  const sections = useMemo(
+    () => [
+      {
+        id: "home",
+        label: "Home",
+        icon: <FaHome />,
+      },
 
-    {
-      id: "about",
-      label: "About",
-      icon: <FaUser />,
-    },
+      {
+        id: "about",
+        label: "About",
+        icon: <FaUser />,
+      },
 
-    {
-      id: "projects",
-      label: "Projects",
-      icon: <FaCode />,
-    },
+      {
+        id: "projects",
+        label: "Projects",
+        icon: <FaCode />,
+      },
 
-    {
-      id: "skills",
-      label: "Skills",
-      icon: <FaLaptopCode />,
-    },
+      {
+        id: "skills",
+        label: "Skills",
+        icon: <FaLaptopCode />,
+      },
 
-    {
-      id: "contact",
-      label: "Contact",
-      icon: <FaEnvelope />,
-    },
-  ];
+      {
+        id: "contact",
+        label: "Contact",
+        icon: <FaEnvelope />,
+      },
+    ],
+    []
+  );
 
   // ================= SCROLL FUNCTION =================
 
@@ -201,7 +204,7 @@ export default function Nav() {
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [sections]);
 
   return (
     <NavBarContainer>

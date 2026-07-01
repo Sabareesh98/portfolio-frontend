@@ -1,6 +1,3 @@
-import React from "react";
-
-
 function Cursor() {
   // No custom cursor or effects, default system pointer
   return null;
